@@ -1,0 +1,52 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=1000&q=80');
+    background-size: cover;
+}
+
+h1 {
+    color: darkorange;
+    font-size: 60px;
+    text-align: center;
+}
+
+#userForm {
+    text-align: center;
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: auto;
+}
+
+input[type=submit] {
+    background-color: darkorange;
+    color: white;
+}
+
+input[type=submit] hover {
+    background-color: blanchedalmond;
+}
+
+#weatherOutput {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid salmon;
+    margin: auto;
+}
+
+#cityNameDisplay {
+    font-size: large;
+}
+
+#cityWeatherDisplay {
+    font-size: large;
+}
+
+#cityTemperatureDisplay {
+    font-size: large;
+}
+
+#cityIconDisplay {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}

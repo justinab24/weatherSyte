@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <h1>Weather Application</h1>
+    <br>
+    <br>
+    <div id="userForm">
+        <form id="userCityInput" action="{{ url_for('index') }}" method="post">
+            <label for="userCityInp">Please enter a city:</label>
+            <input type="text" name="userCityInp">
+            <br>
+            <br>
+            <input type="submit" value="choose">
+        </form>
+    </div>
+    <br>
+    <br>
+    {% for w in weatherData %}
+    <div id="weatherOutput">
+        <h1 id="cityNameDisplay">City: {{ w.city }}</h1>
+        <h1 id="cityWeatherDisplay">Weather: {{ w.description }}</h1>
+        <h1 id="cityTemperatureDisplay">Temperature: {{ w.temperature }}</h1>
+        <img id="cityIconDisplay" src="http://openweathermap.org/img/w/{{ w.icon }}.png" alt="Image">
+    </div>
+    <br>
+    {% endfor %}
+</body>
+</html>
